@@ -181,11 +181,11 @@ def main():
     relation_network_scheduler = tf.keras.optimizers.schedules.ExponentialDecay(LEARNING_RATE,100000,0.5,staircase=True)
     relation_network_optim = tf.keras.optimizers.Adam(learning_rate=0.001,epsilon=1e-08)
 
-    if os.path.exists(str("./models/miniimagenet_feature_encoder_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot")):
-        feature_encoder = tf.keras.models.load_model(str("./models/miniimagenet_feature_encoder_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"))
+    if os.path.exists(str("models/miniimagenet_feature_encoder_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot")):
+        feature_encoder = tf.keras.models.load_model(str("models/miniimagenet_feature_encoder_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"))
         print("load feature encoder success")
-    if os.path.exists(str("./models/miniimagenet_relation_network_"+ str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot")):
-        relation_network = tf.keras.models.load_model(str("./models/miniimagenet_relation_network_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"))
+    if os.path.exists(str("models/miniimagenet_relation_network_"+ str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot")):
+        relation_network = tf.keras.models.load_model(str("models/miniimagenet_relation_network_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"))
         print("load relation network success")
 
     # Step 3: build graph
@@ -233,8 +233,8 @@ def main():
             if test_accuracy > last_accuracy:
 
                 # save networks
-                feature_encoder.save(str("./models/miniimagenet_feature_encoder_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"),save_format='tf')
-                relation_network.save(str("./models/miniimagenet_relation_network_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"),save_format='tf')
+                feature_encoder.save(str("models/miniimagenet_feature_encoder_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"),save_format='tf')
+                relation_network.save(str("models/miniimagenet_relation_network_" + str(CLASS_NUM) +"way_" + str(SAMPLE_NUM_PER_CLASS) +"shot"),save_format='tf')
 
                 print("save networks for episode:",episode)
 
