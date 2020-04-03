@@ -19,6 +19,11 @@ For mini-Imagenet, please refer to [here](https://github.com/floodsung/LearningT
 
 All model are trained with 50000 episodes.
 
+| Experiment             | Accuracy            |
+| -----------------------| ------------------- | 
+| miniImageNet 1-shot    |   `65.34 ± 0.86%`   | 
+| miniImageNet 5-shot    |   `50.06 ± 0.12%`   |  
+
 ## Reference
 
 [LearningToCompare_FSL](https://github.com/floodsung/LearningToCompare_FSL.git).
