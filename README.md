@@ -21,8 +21,8 @@ All model are trained with 50000 episodes.
 
 | Experiment             | Accuracy            |
 | -----------------------| ------------------- | 
-| miniImageNet 1-shot    |   `65.34 ± 0.86%`   | 
-| miniImageNet 5-shot    |   `50.06 ± 0.12%`   |  
+| miniImageNet 1-shot    |   `50.06 ± 0.12%`   | 
+| miniImageNet 5-shot    |   `65.34 ± 0.86%`   |  
 
 ## Reference
 
