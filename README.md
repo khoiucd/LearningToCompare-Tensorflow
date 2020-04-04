@@ -15,9 +15,9 @@ Tensorflow 2.1.0
 
 For mini-Imagenet, please refer to [here](https://github.com/floodsung/LearningToCompare_FSL.git).
 
-## Pretrained model
+## Pretrained models
 
-All model are trained with 50000 episodes.
+All models are trained with 50000 episodes.
 
 | Experiment             | Accuracy            |
 | -----------------------| ------------------- | 
